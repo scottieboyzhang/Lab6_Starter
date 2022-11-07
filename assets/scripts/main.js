@@ -10,7 +10,7 @@ function init() {
   // Add each recipe to the <main> element
   addRecipesToDocument(recipes);
   // Add the event listeners to the form elements
-  //initFormHandler();
+  initFormHandler();
 }
 
 /**
@@ -36,14 +36,14 @@ function getRecipesFromStorage() {
  */
 function addRecipesToDocument(recipes) {
   // A10. TODO - Get a reference to the <main> element
-  var main = document.querySelector('main');
+  var main = document.querySelector("main");
   // A11. TODO - Loop through each of the recipes in the passed in array,
   //            create a <recipe-card> element for each one, and populate
   //            each <recipe-card> with that recipe data using element.data = ...
   //            Append each element to <main>
   for(let i=0; i<recipes.length;i++){
     let temp = document.createElement('recipe-card');
-    temp.data = recipes[i].data;
+    temp.data = recipes[i];
     main.append(temp);
   }
 }
